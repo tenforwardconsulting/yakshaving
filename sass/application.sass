@@ -1,7 +1,42 @@
+@import compass/css3
+@import compass/utilities/general/clearfix
+
+.inner
+  font-family: Helvetica, Arial, sans-serif
+  max-width: 960px
+  margin: 0 auto
+  h1 
+    text-align: center
+.buttons
+  +clearfix
+.shave, #timer
+  width: 400px
+  font-size: 36px
+  background: crimson
+  margin: 12px auto
+  color: white
+  display: block
+  +border-radius(8px)
+  border-color: red
+  text-align: center
+#timer
+  border: none
+  float: none
 #yak
+  display: none
+  margin: 40px auto
   width: 800px
   height: 600px
   position: relative
+  &.small
+    width: 200px
+    height: 150px
+  &.medium
+    width: 400px
+    height: 300px
+  &.large
+    width: 800px
+    height: 600px
   #body
     position: absolute
     background: url(../images/yak.png) no-repeat
@@ -19,10 +54,11 @@
     -webkit-mask-image: url(../images/mask.png)
     -webkit-mask-position-x: 0%
     -webkit-mask-position-y: 100%
+    -webkit-mask-size: 305% //lol
   #razor
     position: absolute
     background: url(../images/razor.png) no-repeat
     background-size: 100%
-    width: 101px
-    height: 158px
+    width: 12.6%
+    height: 26.3%
     display: none

@@ -15,16 +15,30 @@
     <script src="js/BigYakView.js"></script>
   </head>
   <body>
-    <div id="content">
-    </div>
+    <div class="inner">
+      <h1>Yak Shaving Timer</h1>
+      <p>
+        As we all know, Yak shaving is the best shaving, but as a responsible professional it should only take up so much of your time. This time will give you 15 minutes to shave away free of guilt and then gently remind you to get back to work.
+      </p>
+      <div id="content">
+      </div>
+    </inner>
 
     <script type="text/template" id="big_yak-template">
-      <div id="yak">
+      <div class="buttons">
+        <button class="small shave">Little Yak!</button>
+        <button class="medium shave">Normal Yak!</button>
+        <button class="large shave">Huge Yak!</button>
+      </div>
+
+      <div id="timer"></div>
+      
+      <div id="yak" class="smaall">
         <div id="body"></div>
         <div id="fur"></div>
         <div id="razor"></div>
       </div>
-      <button id="shave">Shave</button>
+
     </script>
   </body>
 </html>
