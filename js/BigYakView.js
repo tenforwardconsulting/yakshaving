@@ -64,6 +64,7 @@
         right: ((this.x - 12) / .75) + "%",
         "-webkit-transition": "top 0s linear, right 0s linear"
       });
+      razor.hide().show(0);
       razor.show();
       $('#fur').css('-webkit-transition', "-webkit-mask-position-y 0s linear");
       $('#fur').css('webkit-mask-position', this.x + "% 100%");
