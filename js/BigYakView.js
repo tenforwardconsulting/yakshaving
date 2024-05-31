@@ -61,19 +61,19 @@
       this.x += this.dX;
       razor.css({
         top: '15%',
-        right: "" + ((this.x - 12) / .75) + "%",
+        right: ((this.x - 12) / .75) + "%",
         "-webkit-transition": "top 0s linear, right 0s linear"
       });
       razor.show();
       $('#fur').css('-webkit-transition', "-webkit-mask-position-y 0s linear");
-      $('#fur').css('webkit-mask-position', "" + this.x + "% 100%");
+      $('#fur').css('webkit-mask-position', this.x + "% 100%");
       setTimeout(function() {
         razor.css({
           top: '65%',
           "-webkit-transition": "top " + _this.strokeDuration + "s linear, right " + _this.strokeDuration + "s linear"
         });
         $('#fur').css('-webkit-transition', "-webkit-mask-position-y " + _this.strokeDuration + "s linear");
-        return $('#fur').css('webkit-mask-position', "" + _this.x + "% 50%");
+        return $('#fur').css('webkit-mask-position', _this.x + "% 50%");
       }, 0);
       if (this.x + this.dX >= 79) {
         return clearInterval(this.shaveInterval);
