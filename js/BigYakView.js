@@ -56,25 +56,32 @@
 
     BigYakView.prototype.shaveIt = function() {
       var razor,
+        fur,
         _this = this;
       razor = $('#razor');
+      fur = $('#fur');
       this.x += this.dX;
+
       razor.css({
         top: '15%',
         right: ((this.x - 12) / .75) + "%",
         "-webkit-transition": "top 0s linear, right 0s linear"
       });
       razor.hide().show(0);
-      razor.show();
-      $('#fur').css('-webkit-transition', "-webkit-mask-position-y 0s linear");
-      $('#fur').css('webkit-mask-position', this.x + "% 100%");
+
+      fur.css({
+        '-webkit-transition': '-webkit-mask-position-y 0s linear',
+        'webkit-mask-position': this.x + "% 100%"
+      })
+      fur.hide().show(0);
+
       setTimeout(function() {
         razor.css({
           top: '65%',
           "-webkit-transition": "top " + _this.strokeDuration + "s linear, right " + _this.strokeDuration + "s linear"
         });
-        $('#fur').css('-webkit-transition', "-webkit-mask-position-y " + _this.strokeDuration + "s linear");
-        return $('#fur').css('webkit-mask-position', _this.x + "% 50%");
+        fur.css('-webkit-transition', "-webkit-mask-position-y " + _this.strokeDuration + "s linear");
+        return fur.css('webkit-mask-position', _this.x + "% 50%");
       }, 0);
       if (this.x + this.dX >= 79) {
         return clearInterval(this.shaveInterval);
